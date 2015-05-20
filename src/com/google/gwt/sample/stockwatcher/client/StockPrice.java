@@ -9,9 +9,15 @@ public class StockPrice {
 	  private double price;
 	  private double change;
 	  private String randomString;
+	  
 
 	  public StockPrice() {
+/*<<<<<<< HEAD
 		  //These comments should cause a conflict.
+||||||| merged common ancestors
+=======
+		  //this change exists in branch1
+>>>>>>> branch1*/
 	  }
 
 	  public StockPrice(String symbol, double price, double change) {
