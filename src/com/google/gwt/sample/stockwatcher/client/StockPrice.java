@@ -11,6 +11,7 @@ public class StockPrice {
 	  private String randomString;
 
 	  public StockPrice() {
+		  //These comments should cause a conflict.
 	  }
 
 	  public StockPrice(String symbol, double price, double change) {
