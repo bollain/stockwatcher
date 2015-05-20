@@ -231,11 +231,12 @@ public class StockWatcher implements EntryPoint {
 		  final String symbol = newSymbolTextBox.getText().toUpperCase().trim();
 		    newSymbolTextBox.setFocus(true);
 		    
-		    // Stock code must be between 1 and 10 chars that are numbers, letters, or dots.
+		    // Stock code should be non-empty.
 		    if (symbol.matches("")) {
 		    	Window.alert("Please enter a stock first");
 		    	return;
 		    }
+		    // Stock code must be between 1 and 10 chars that are numbers, letters, or dots.
 		    else if (!symbol.matches("^[0-9A-Z&#92;&#92;.]{1,10}$")) {
 		      Window.alert("'" + symbol + "' is not a valid stock.");
 		      newSymbolTextBox.selectAll();
