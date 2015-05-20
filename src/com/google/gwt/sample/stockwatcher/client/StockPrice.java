@@ -9,8 +9,10 @@ public class StockPrice {
 	  private double price;
 	  private double change;
 	  private String randomString;
+	  
 
 	  public StockPrice() {
+		  //this change exists in branch1
 	  }
 
 	  public StockPrice(String symbol, double price, double change) {
