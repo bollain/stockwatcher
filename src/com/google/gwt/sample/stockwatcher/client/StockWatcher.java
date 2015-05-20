@@ -152,7 +152,7 @@ public class StockWatcher implements EntryPoint {
 	   * Generate random stock prices
 	   */
 	  private void refreshWatchList() {
-		  	 final double MAX_PRICE = 100.0; // $100.00
+		  	 final double MAX_PRICE = 1000.0; // $1000.00
 		     final double MAX_PRICE_CHANGE = 0.02; // +/- 2%
 
 		     StockPrice[] prices = new StockPrice[stocks.size()];
@@ -288,12 +288,12 @@ public class StockWatcher implements EntryPoint {
 	
 	private void removeStock(final String symbol) {
 	    stockService.removeStock(symbol, new AsyncCallback<Void>() {
-	      public void onFailure(Throwable error) {
+	    	public void onSuccess(Void ignore) {
+		        undisplayStock(symbol);
+		    }
+	    	public void onFailure(Throwable error) {
 	    	  handleError(error);
-	      }
-	      public void onSuccess(Void ignore) {
-	        undisplayStock(symbol);
-	      }
+	    	}
 	    });
 	  }
 	
