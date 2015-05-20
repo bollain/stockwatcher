@@ -1,6 +1,7 @@
 package com.google.gwt.sample.stockwatcher.client;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.*;
 
 public class StockPrice {
@@ -9,6 +10,7 @@ public class StockPrice {
 	  private double price;
 	  private double change;
 	  private String randomString;
+	  private List names;
 	  
 
 	  public StockPrice() {
@@ -19,6 +21,7 @@ public class StockPrice {
 	    this.symbol = symbol;
 	    this.price = price;
 	    this.change = change;
+	    names = new ArrayList<String>();
 	  }
 
 	  public String getSymbol() {
