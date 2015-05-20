@@ -288,12 +288,12 @@ public class StockWatcher implements EntryPoint {
 	
 	private void removeStock(final String symbol) {
 	    stockService.removeStock(symbol, new AsyncCallback<Void>() {
-	      public void onFailure(Throwable error) {
+	    	public void onSuccess(Void ignore) {
+		        undisplayStock(symbol);
+		    }
+	    	public void onFailure(Throwable error) {
 	    	  handleError(error);
-	      }
-	      public void onSuccess(Void ignore) {
-	        undisplayStock(symbol);
-	      }
+	    	}
 	    });
 	  }
 	
