@@ -236,7 +236,7 @@ public class StockWatcher implements EntryPoint {
 		    	Window.alert("Please enter a stock first");
 		    	return;
 		    }
-		    if (!symbol.matches("^[0-9A-Z&#92;&#92;.]{1,10}$")) {
+		    else if (!symbol.matches("^[0-9A-Z&#92;&#92;.]{1,10}$")) {
 		      Window.alert("'" + symbol + "' is not a valid stock.");
 		      newSymbolTextBox.selectAll();
 		      return;
@@ -247,10 +247,10 @@ public class StockWatcher implements EntryPoint {
 		    // Don't add the stock if it's already in the table.
 		    	if (stocks.contains(symbol))
 		    		return;
-		    
-		    //displayStock(symbol);
-		    addStock(symbol);
-
+		    	else {
+		    		//displayStock(symbol);
+		    		addStock(symbol);
+		    	}
       }
 	  
 	  private void addStock(final String symbol) {
